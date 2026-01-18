@@ -21,66 +21,6 @@ overflow-x: hidden;
 }
 
 /* =====================
-    SECURITY STYLES
-===================== */
-#lockScreen {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: #1a1a1a;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    color: #d4af37;
-    text-align: center;
-}
-.lock-box {
-    background: #2b2b2b;
-    padding: 40px;
-    border-radius: 20px;
-    border: 1px solid #d4af37;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    max-width: 400px;
-    width: 90%;
-}
-/* ADDED LOGO FOR LOCK SCREEN */
-.lock-logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
-    border: 1px solid #d4af37;
-    margin-bottom: 20px;
-}
-
-.pass-input {
-    padding: 12px;
-    width: 250px;
-    border-radius: 5px;
-    border: 1px solid #d4af37;
-    background: #333;
-    color: #fff;
-    margin-bottom: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 16px;
-}
-.btn-login {
-    background: #d4af37;
-    color: #000;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-.btn-login:hover { background: #f5e6b0; }
-.content-hidden { display: none !important; }
-
-/* =====================
     TOP INFO BAR
 ===================== */
 .top-info{
@@ -130,14 +70,13 @@ text-align: left;
 
 .logo-trigger h1 {
 font-family:'Poppins',sans-serif;
-font-size:26px; /* Slightly larger */
+font-size:26px; 
 color:#d4af37;
 line-height: 1;
 text-transform: uppercase;
 margin-bottom: 2px;
 }
 
-/* SMALLER SUB-TEXT */
 .logo-trigger .sub-logo-text {
     font-size: 11px;
     color: #888;
@@ -249,7 +188,7 @@ box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 /* =====================
-    ABOUT DESIGN STYLES
+    ABOUT Me
 ===================== */
 .about-container {
     max-width: 1000px;
@@ -399,29 +338,13 @@ footer{ background:#2b2b2b; color:#e0e0e0; text-align:center; padding:25px; marg
 
 <body>
 
-<div id="lockScreen">
-    <div class="lock-box">
-        <img src="images/TS TELLESIMP CREATIVE STUDIO LOGO.jpg" alt="Logo" class="lock-logo">
-        <h1 style="font-family:'Poppins'; margin-bottom:10px;">TELLESIMP</h1>
-        <p style="color:#888; margin-bottom:15px;">Private Repository - Access Restricted</p>
-        
-        <p style="color:#d4af37; font-size:14px; margin-bottom:20px; line-height:1.4;">
-            Please <a href="https://www.facebook.com/liraykrystelle.maumbas" target="_blank" style="color:#fff; text-decoration:underline;">Message me on Facebook</a><br> to ask for permission and get the password.
-        </p>
-
-        <input type="password" id="sitePassInput" class="pass-input" placeholder="Enter Password">
-        <button class="btn-login" onclick="checkPassword()">UNLOCK SITE</button>
-        <p id="lockError" style="color:#ff4d4d; font-size:14px; margin-top:15px; display:none;">Incorrect Password!</p>
-    </div>
-</div>
-
-<div class="top-info content-hidden">
+<div class="top-info">
 <div><i class="fa-solid fa-gem"></i> Elegant Designs</div>
 <div><i class="fa-solid fa-palette"></i> Creative Studio</div>
 <div><i class="fa-solid fa-envelope"></i> Contact Anytime</div>
 </div>
 
-<nav class="content-hidden">
+<nav>
 <div class="logo-trigger" onclick="toggleLogo()">
     <img src="images/TS TELLESIMP CREATIVE STUDIO LOGO.jpg" alt="Logo">
     <h1>Tellesimp</h1>
@@ -438,15 +361,10 @@ footer{ background:#2b2b2b; color:#e0e0e0; text-align:center; padding:25px; marg
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#services">Services</a></li>
-<li style="margin-top: 20px; border-top: 1px solid #444; padding-top: 20px;">
-    <a href="javascript:void(0)" onclick="openModal('changePassModal')" style="color: #d4af37; font-size: 14px;">
-        <i class="fa-solid fa-lock"></i> Change Password
-    </a>
-</li>
 </ul>
 </nav>
 
-<div class="main content-hidden">
+<div class="main">
 
 <div class="logo-banner" id="home">
 <h2>WELCOME</h2>
@@ -465,7 +383,7 @@ footer{ background:#2b2b2b; color:#e0e0e0; text-align:center; padding:25px; marg
         <div class="about-info-box">
             <span class="highlight-name">Krystelle M. Liray</span>
             <span class="degree-text">BIntech - Major in Computer & Information Technology</span>
-           
+            
             <div class="info-item">
                 <i class="fa-solid fa-user-graduate"></i>
                 <span>Davao Oriental International Technology College</span>
@@ -550,11 +468,17 @@ footer{ background:#2b2b2b; color:#e0e0e0; text-align:center; padding:25px; marg
     <div class="item"><img src="images/TS TELLESIMP CREATIVE STUDIO LOGO.jpg" onclick="viewFullScreen(this.src)"></div>
      <div class="item"><img src="images/portfolio/logo3.jpg" onclick="viewFullScreen(this.src)"></div>
       <div class="item"><img src="images/portfolio/logo4.jpg" onclick="viewFullScreen(this.src)"></div>
+      <div class="item"><img src="images/portfolio/logo5.jpg" onclick="viewFullScreen(this.src)"></div>
+      <div class="item"><img src="images/portfolio/logo6.jpg" onclick="viewFullScreen(this.src)"></div>
+
 </div>
 
 <div class="portfolio-scroll-container" id="posters">
     <div class="item"><img src="images/portfolio/Poster1.png" onclick="viewFullScreen(this.src)"></div>
     <div class="item"><img src="images/portfolio/Poster2.jpg" onclick="viewFullScreen(this.src)"></div>
+    <div class="item"><img src="images/portfolio/Poster3.jpg" onclick="viewFullScreen(this.src)"></div>
+    <div class="item"><img src="images/portfolio/Poster4.jpg" onclick="viewFullScreen(this.src)"></div>
+   
 </div>
 
 <div class="portfolio-scroll-container" id="flyers">
@@ -657,62 +581,45 @@ footer{ background:#2b2b2b; color:#e0e0e0; text-align:center; padding:25px; marg
 </div>
 </div>
 
-<div id="changePassModal" class="modal">
-    <div class="modal-content" style="background: #2b2b2b; border: 1px solid #d4af37;">
-        <span class="close-modal close-white" onclick="closeModal('changePassModal')">&times;</span>
-        <h2 style="color:#d4af37; font-family:'Poppins';">Security Settings</h2>
-        <p style="color:#888; margin-bottom: 20px;">Verify your identity to change the password.</p>
-        
-        <input type="password" id="currentPassInput" class="pass-input" placeholder="Enter Current Password">
-        <input type="password" id="newPassInput" class="pass-input" placeholder="Enter New Password">
-        
-        <button class="btn-login" onclick="updatePassword()">SAVE NEW PASSWORD</button>
-        <p id="changePassError" style="color:#ff4d4d; font-size:14px; margin-top:15px; display:none;"></p>
-    </div>
-</div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <script>
-// --- SECURITY SCRIPT ---
-if (!localStorage.getItem('sitePassword')) {
-    localStorage.setItem('sitePassword', 'Tellesimp12345678910');
-}
+// Welcome Fiesta Blast Effect
+window.addEventListener('load', () => {
+    // 1. Central Blast (The Canva Welcome Style)
+    confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { y: 0.6 },
+        colors: ['#d4af37', '#cfcfcf', '#ffffff', '#b58b2a', '#f1c40f', '#ff4757', '#2ecc71']
+    });
 
-function checkPassword() {
-    const input = document.getElementById('sitePassInput').value;
-    const correctPass = localStorage.getItem('sitePassword');
-    if (input === correctPass) {
-        document.getElementById('lockScreen').style.display = 'none';
-        document.querySelectorAll('.content-hidden').forEach(el => el.classList.remove('content-hidden'));
-    } else {
-        document.getElementById('lockError').style.display = 'block';
-    }
-}
+    // 2. Fiesta Side Cannons (Lasts for 3 seconds)
+    var duration = 3 * 1000;
+    var end = Date.now() + duration;
 
-function updatePassword() {
-    const currentInput = document.getElementById('currentPassInput').value;
-    const newPass = document.getElementById('newPassInput').value;
-    const correctPass = localStorage.getItem('sitePassword');
-    const errorEl = document.getElementById('changePassError');
+    (function frame() {
+      // Left Cannon
+      confetti({
+        particleCount: 3,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 },
+        colors: ['#d4af37', '#b58b2a', '#ff4757']
+      });
+      // Right Cannon
+      confetti({
+        particleCount: 3,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+        colors: ['#cfcfcf', '#ffffff', '#2ecc71']
+      });
 
-    if (currentInput === correctPass) {
-        if (newPass.trim() !== "") {
-            localStorage.setItem('sitePassword', newPass);
-            errorEl.style.display = "block";
-            errorEl.style.color = "#2ecc71";
-            errorEl.innerText = "Success! Reloading site...";
-            setTimeout(() => location.reload(), 1500);
-        } else {
-            errorEl.style.display = "block";
-            errorEl.innerText = "New password cannot be empty.";
-        }
-    } else {
-        errorEl.style.display = "block";
-        errorEl.innerText = "Current password incorrect.";
-    }
-}
-
-document.getElementById('sitePassInput').addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') checkPassword();
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    }());
 });
 
 // --- ORIGINAL SCRIPTS ---
